@@ -4,11 +4,48 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
+
+// Função para imprimir o tabuleiro com cabeçalhos
+void imprimirTabuleiro(int tabuleiro[10][10]) {
+    printf("TABULEIRO BATALHA NAVAL\n");
+    printf("  A B C D E F G H I J\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%-2d", i + 1); // Exibe os números das linhas de 1 a 10
+        for (int j = 0; j < 10; j++) {
+            printf("%d ", tabuleiro[i][j]); // Exibe o conteúdo da matriz
+        }
+        printf("\n");
+    }
+}
+
 int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+// ------------------------------------------------------------------------------------------
+
+    // Tabuleiro 10x10 inicializado com 0s
+    int tabuleiro[10][10] = {0};
+
+    // Navio horizontal (3 posições)
+    // Coordenadas: (linha 3, colunas D, E, F)
+    tabuleiro[2][3] = 3;
+    tabuleiro[2][4] = 3;
+    tabuleiro[2][5] = 3;
+
+    // Navio vertical (4 posições)
+    // Coordenadas: (coluna H, linhas 6 a 9)
+    tabuleiro[5][7] = 3;
+    tabuleiro[6][7] = 3;
+    tabuleiro[7][7] = 3;
+    tabuleiro[8][7] = 3;
+
+    printf("--- Nivel Novato: Tabuleiro Visual ---\n\n");
+    imprimirTabuleiro(tabuleiro);
+
+//-------------------------------------------------------------------------------------------
+
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
@@ -35,6 +72,8 @@ int main() {
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
+
+    
 
     return 0;
 }
